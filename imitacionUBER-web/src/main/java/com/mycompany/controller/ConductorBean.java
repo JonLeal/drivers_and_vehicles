@@ -101,16 +101,6 @@ public class ConductorBean {
     public void setActivo(Boolean activo) {
         this.activo = activo;
     }
-
-    public List<Conductor> getConductores() {
-        return conductores;
-    }
-
-    public void setConductores(List<Conductor> conductores) {
-        this.conductores = conductores;
-    }
-    
-    
     
     public List<Conductor> obtenerConductores(){
         if (conductores == null || conductores.isEmpty()) {

@@ -7,8 +7,8 @@ package com.mycompany.controller;
 
 import com.mycompany.dao.ConductorFacadeLocal;
 import com.mycompany.dao.VehiculoFacadeLocal;
-import com.mycompany.model.Conductor;
 import com.mycompany.model.Vehiculo;
+import java.util.List;
 import javax.ejb.EJB;
 
 /**
@@ -22,7 +22,7 @@ public class VehiculoBean {
 
     @EJB
     private VehiculoFacadeLocal vehiculoFacade;
-    
+
     private String marca;
     private String modelo;
     private Integer anoFabricacion;
@@ -30,7 +30,8 @@ public class VehiculoBean {
     private String color;
     private Boolean activo;
     private Integer idConductor;
-    private Conductor Conductor;
+
+    private List<Vehiculo> vehiculos;
 
     /**
      * Creates a new instance of VehiculoBean
@@ -101,8 +102,15 @@ public class VehiculoBean {
     public void setIdConductor(Integer idConductor) {
         this.idConductor = idConductor;
     }
+
+    public List<Vehiculo> getVehiculos(){
+        if (vehiculos == null || vehiculos.isEmpty()) {
+            vehiculos = vehiculoFacade.findAll();
+        }
+        return vehiculos;
+    }
     
-        public void guardarVehiculo(){
+    public void guardarVehiculo() {
         Vehiculo vehiculo = new Vehiculo();
         vehiculo.setMarca(marca);
         vehiculo.setModelo(modelo);
