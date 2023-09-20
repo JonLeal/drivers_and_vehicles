@@ -8,4 +8,9 @@
         <managed-bean-class>com.mycompany.controller.ConductorBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
     </managed-bean>
+    <managed-bean>
+        <managed-bean-name>vehiculoBean</managed-bean-name>
+        <managed-bean-class>com.mycompany.controller.VehiculoBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
 </faces-config>
