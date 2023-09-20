@@ -1,0 +1,10 @@
+com\mycompany\dao\ConductorFacadeLocal.class
+com\mycompany\modelo\Vehiculo.class
+com\mycompany\dao\AbstractFacade.class
+com\mycompany\dao\ConductorFacade.class
+com\mycompany\modelo\Conductor.class
+com\mycompany\modelo\Conductor_.class
+com\mycompany\dao\VehiculoFacadeLocal.class
+com\mycompany\NewSessionBean.class
+com\mycompany\modelo\Vehiculo_.class
+com\mycompany\dao\VehiculoFacade.class
